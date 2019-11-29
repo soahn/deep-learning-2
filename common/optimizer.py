@@ -14,7 +14,7 @@ class SGD:
         for i in range(len(params)):
             params[i] -= self.lr * grads[i]
 
-
+# class Momentum / AdaGrad / Adam are from the first version of the book
 class Momentum:
     '''
     Momentum SGD
@@ -59,9 +59,6 @@ class Nesterov:
 
 
 class AdaGrad:
-    '''
-    AdaGrad
-    '''
     def __init__(self, lr=0.01):
         self.lr = lr
         self.h = None
@@ -78,9 +75,6 @@ class AdaGrad:
 
 
 class RMSprop:
-    '''
-    RMSprop
-    '''
     def __init__(self, lr=0.01, decay_rate = 0.99):
         self.lr = lr
         self.decay_rate = decay_rate
